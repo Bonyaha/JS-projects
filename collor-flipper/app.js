@@ -18,13 +18,13 @@ $(document).ready(() => {
   const btn = $('#btn');
   const color = $('.color');
   const colors = ['green', 'red', 'rgba(133,122,200)', '#f15025'];
-  console.log(color);
+
   btn.click(() => {
     const randomNumber = getRandomNumber();
-    $(document)[0].body.style.backgroundColor = colors[randomNumber];
-    console.log($(document)[0].body);
+    console.log($('body'.style));
+    $('body').style.backgroundColor = colors[randomNumber];
 
-    color[0].textContent = colors[randomNumber];
+    color.text(colors[randomNumber]);
   });
 
   function getRandomNumber() {
