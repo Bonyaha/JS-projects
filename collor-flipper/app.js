@@ -21,9 +21,9 @@ $(document).ready(() => {
 
   btn.click(() => {
     const randomNumber = getRandomNumber();
-    console.log($('body'.style));
-    $('body').style.backgroundColor = colors[randomNumber];
-
+    console.log($('body').css('background-color'));
+    $('body').css('background-color', colors[randomNumber]);
+    console.log($('body').css('background-color'));
     color.text(colors[randomNumber]);
   });
 
