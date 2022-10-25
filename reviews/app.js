@@ -41,7 +41,7 @@ const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const randomBtn = document.querySelector('.random-btn');
 
-/* set starting item */
+// set starting item
 let currentItem = 0;
 
 //load Initial item
@@ -73,3 +73,43 @@ randomBtn.addEventListener('click', () => {
   currentItem = Math.floor(Math.random() * reviews.length);
   showPerson();
 });
+
+//jQuery
+
+/* const image = $('#person-img');
+const author = $('#author');
+const job = $('#job');
+const info = $('#info');
+
+
+const prevBtn = $('.prev-btn');
+const nextBtn = $('.next-btn');
+const randomBtn = $('.random-btn');
+
+let currentItem = 0;
+$(window).on('load', () => {
+  showPerson();
+});
+
+function showPerson() {
+  const item = reviews[currentItem];
+  image.attr('src', item.img);
+  author.text(item.name);
+  job.text(item.job);
+  info.text(item.text);
+}
+
+nextBtn.click(() => {
+  currentItem > 2 ? (currentItem = 0) : currentItem++;
+
+  showPerson();
+});
+prevBtn.click(() => {
+  currentItem == 0 ? (currentItem = 3) : currentItem--;
+  showPerson();
+});
+
+randomBtn.click(() => {
+  currentItem = Math.floor(Math.random() * reviews.length);
+  showPerson();
+}); */
